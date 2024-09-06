@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Playback Controller",
+    "description": "Control YouTube video playback using shortcuts and buttons.",
+    "version": "1.2",
+    "permissions": ["tabs", "scripting", "commands"],
+    "host_permissions": [
+      "https://www.youtube.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "commands": {
+      "play-pause": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+P",
+          "mac": "Command+Shift+P"
+        },
+        "description": "Play/Pause video"
+      },
+      "prev-video": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+B",
+          "mac": "Command+Shift+B"
+        },
+        "description": "Previous video"
+      },
+      "rewind-5-seconds": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+R",
+          "mac": "Alt+O"
+        },
+        "description": "Rewind 5 seconds"
+      },
+      "forward-5-seconds": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "Alt+F"
+        },
+        "description": "Forward 5 seconds"
+      }
+    },
+    "icons": {
+      "16": "icons/pause-button.png",
+      "48": "icons/play.png"
+  }
+}
+  

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playback Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            width: 240px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 18px;
+            padding: 15px 0;
+            margin: 0;
+            background-color: #f44336;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px 0;
+            background-color: #f44336;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        button:active {
+            background-color: #c62828;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .button-icon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h2>YouTube Controller</h2>
+    <div class="container">
+        <button id="playPause">
+            <span class="button-icon">▶️⏸️</span> Play/Pause
+        </button>
+        <button id="nextVideo">
+            <span class="button-icon">⏭️</span> Next Video
+        </button>
+        <button id="prevVideo">
+            <span class="button-icon">⏮️</span> Previous Video
+        </button>
+        <button id="rewind">
+            <span class="button-icon">⏪</span> Rewind 5 Seconds
+        </button>
+        <button id="forward">
+            <span class="button-icon">⏩</span> Forward 5 Seconds
+        </button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
